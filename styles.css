@@ -1,0 +1,264 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta el video para cubrir el área completa */
+}
+
+/* Estilos del header */
+header {
+  background: rgba(12, 40, 70, 0.8); /* Azul */
+  color: #cad5d1;
+  padding: 1.5em 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 2.5em;
+  animation: pulse 2s infinite; /* Animación de pulso */
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Estilos del nav */
+nav {
+  background: rgba(70, 130, 180, 0.8); /* Celeste más oscuro */
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1.5em;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffeb3b; /* Color al pasar el ratón */
+}
+
+/* Estilos de las secciones */
+section {
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 1em auto;
+  max-width: 90%;
+  width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: relative;
+}
+
+.center-text {
+  text-align: center;
+}
+
+section h2 {
+  color: #007bff; /* Azul */
+  margin-bottom: 0.5em;
+}
+
+/* Estilos de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+table, th, td {
+  border: 1px solid #007bff; /* Azul */
+}
+
+th, td {
+  padding: 0.8em;
+  text-align: left;
+  word-wrap: break-word; /* Evita el desbordamiento de texto en celdas */
+}
+
+thead {
+  background: rgba(70, 130, 180, 0.8); /* Celeste más oscuro */
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(230, 230, 230, 0.5); /* Fondo alternado */
+}
+
+tbody tr:hover {
+  background: rgba(0, 123, 255, 0.1); /* Fondo al pasar el ratón */
+}
+
+/* Estilos del formulario */
+form {
+  max-width: 100%; /* Asegura que el formulario no sea más ancho que su contenedor */
+  width: 100%;
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  margin-left: 0%;
+  padding: 3.5em;
+  background: #d0e7f9; /* Celeste más oscuro */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
+form div {
+  margin-bottom: 1.2em;
+}
+
+form label {
+  margin-bottom: .5em;
+  color: #2c3e50;
+  display: block;
+  font-size: 1.1em;
+}
+
+form input, form textarea {
+  border: 2px solid #007bff; /* Azul */
+  background: #ffffff;
+  padding: .75em;
+  font-size: 1em;
+  width: 100%;
+  border-radius: 5px;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #0056b3; /* Azul oscuro */
+  outline: none;
+}
+
+form button {
+  padding: 0.8em;
+  color: #fff;
+  background-color: #007bff; /* Azul */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3; /* Azul oscuro */
+}
+
+/* Estilos del footer */
+footer {
+  background: rgba(0, 123, 255, 0.8); /* Azul */
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.footer-content {
+  max-width: 90%;
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilos adicionales */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+video {
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+  border: 2px solid #007bff; /* Azul */
+  border-radius: 8px;
+}
+
+audio {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  border: 2px solid #007bff; /* Azul */
+  border-radius: 8px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.animated-gif {
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+  border: 2px solid #007bff; /* Azul */
+  border-radius: 8px;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 0.5em 0;
+  }
+
+  section {
+    margin: 0.5em;
+    width: auto;
+    padding: 1em;
+  }
+
+  table {
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    display: block; /* Hace que la tabla sea más flexible */
+    overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+    -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en iOS */
+  }
+
+  form {
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+  }
+
+  form div {
+    margin-bottom: 1em;
+  }
+
+  form input, form textarea {
+    font-size: 0.9em; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+  }
+
+  form button {
+    font-size: 1em;
+  }
+
+  .footer-content {
+    width: auto;
+    padding: 1em;
+  }
+}

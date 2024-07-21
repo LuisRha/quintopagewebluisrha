@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a JavaScript</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="video1.mp4" type="video/mp4">
+            
+        </video>
+    </div>
+    <header>
+        <h1>Introducción a JavaScript</h1>
+    </header>
+    <nav>
+        <a href="#section1">¿Qué es JavaScript?</a>
+        <a href="#section2">Características y Beneficios</a>
+        <a href="#section3">Recursos de Aprendizaje</a>
+        <a href="#formulario">Contacto</a>
+    </nav>
+    <section id="section1">
+        <h2>¿Qué es JavaScript?</h2>
+        <p>JavaScript es un lenguaje de programación que se utiliza para crear contenido dinámico e interactivo en las páginas web. Es fundamental para el desarrollo web moderno y se usa junto con HTML y CSS para construir aplicaciones web interactivas.</p>
+        <h3 class="center-text">✨💻✨</h3>
+    </section>
+    <section id="section2">
+        <h2>Características y Beneficios</h2>
+        <p>Algunas características y beneficios de JavaScript incluyen:</p>
+        <ul>
+            <li>Permite la creación de contenido dinámico en las páginas web.</li>
+            <li>Facilita la validación de formularios en el navegador.</li>
+            <li>Soporta programación orientada a objetos y funcional.</li>
+            <li>Se puede utilizar tanto en el cliente (navegador) como en el servidor (Node.js).</li>
+        </ul>
+        <video controls>
+            <source src="JavaScript.mp4" type="video/mp4">
+            
+        </video>
+    </section>
+    
+    <section id="table-section">
+        <h2>Conceptos Clave de JavaScript</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Concepto</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Variables</td>
+            <td>Contenedores para almacenar datos.</td>
+            <td><code>let nombre = "Juan";</code></td>
+        </tr>
+        <tr>
+            <td>Funciones</td>
+            <td>Bloques de código reutilizables que realizan una tarea específica.</td>
+            <td><code>function saludar() { alert("Hola!"); }</code></td>
+        </tr>
+        <tr>
+            <td>Objetos</td>
+            <td>Conjuntos de pares clave-valor.</td>
+            <td><code>let persona = { nombre: "Ana", edad: 30 };</code></td>
+        </tr>
+        <tr>
+            <td>Arreglos</td>
+            <td>Listas ordenadas de elementos.</td>
+            <td><code>let numeros = [1, 2, 3, 4];</code></td>
+        </tr>
+        <tr>
+            <td>Promesas</td>
+            <td>Objetos que representan la finalización o el fracaso de una operación asincrónica.</td>
+            <td><code>let promesa = new Promise((resolve, reject) => { /* ... */ });</code></td>
+        </tr>
+        <tr>
+            <td>Eventos</td>
+            <td>Acciones que ocurren en el navegador, como clics o cambios.</td>
+            <td><code>document.addEventListener('click', () => { alert('Clic!'); });</code></td>
+        </tr>
+    </tbody>
+</table>
+    </section>
+    <div>
+        <section id="section3">
+            <h2>Recursos de Aprendizaje</h2>
+            <p>Para aprender más sobre JavaScript, puedes visitar los siguientes recursos:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=RqQ1d1qEWlE" target="_blank">Tutorial de JavaScript para Principiantes</a></li>
+                <li><a href="https://www.javascript.com/" target="_blank">Blog de JavaScript</a></li>
+                <li><a href="https://eloquentjs-es.thedojo.mx/Eloquent_JavaScript.pdf" target="_blank">Libro: JavaScript Avanzado</a></li>
+            </ul>
+        </section>
+        </div>
+
+    <section id="formulario">
+        <h2>Contacto</h2>
+        <form action="/submit-form" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Ingresa tu email">
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Luis Huatatoca</p>
+        </div>
+    </footer>
+</body>
+</html>
