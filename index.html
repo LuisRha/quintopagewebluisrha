@@ -16,14 +16,102 @@
         </video>
     </div>
     <header>
+        <div>
+            <div class="contador" id="contador"></div>
+            <p>Has visitado esta página <span id="veces"></span> veces.</p>
+        </div>
+        
+        <script>
+            // Obtener el contador del localStorage, o inicializarlo si no existe
+            let visitas = localStorage.getItem('visitas');
+        
+            if (visitas) {
+                visitas = parseInt(visitas) + 1; // Incrementar el contador
+            } else {
+                visitas = 1; // Iniciar el contador
+            }
+        
+            // Guardar el nuevo valor en el localStorage
+            localStorage.setItem('visitas', visitas);
+        
+            // Mostrar el contador en la página
+            document.getElementById('veces').textContent = visitas;
+        </script>
+        
+
+
         <h1>Introducción a JavaScript</h1>
     </header>
-    <nav>
+        <nav>
         <a href="#section1">¿Qué es JavaScript?</a>
         <a href="#section2">Características y Beneficios</a>
         <a href="#section3">Recursos de Aprendizaje</a>
         <a href="#formulario">Contacto</a>
-    </nav>
+        
+    
+    <input type="text" id="busqueda" onkeyup="filtrarLista()" placeholder="Buscar...">
+    <ul class="lista" id="miLista">
+        <!-- <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li> -->
+    </ul>
+
+    <script>
+        function filtrarLista() {
+            const input = document.getElementById('busqueda');
+            const filtro = input.value.toLowerCase();
+            const lista = document.getElementById('miLista');
+            const elementos = lista.getElementsByTagName('li');
+            for (let i = 0; i < elementos.length; i++) {
+                const txtValue = elementos[i].textContent || elementos[i].innerText;
+                elementos[i].style.display = txtValue.toLowerCase().indexOf(filtro) > -1 ? '' : 'none';
+            }
+        }
+    </script>
+
+    
+        </nav>
+        <div> <a id="openModal">Modal</a>
+    
+            <div id="myModal" class="modal">
+                <div class="modal-header">
+                    <span class="close" id="closeModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Agilizará el proceso de desarrollo, diseño e implementación de las aplicaciones o soluciones que tu empresa necesita, brindándote una solución que cumpla con tus expectativas y las de tus usuarios.</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="closeModalButton">Cerrar</button>
+                </div>
+            </div>
+        
+            <script>
+                const modal = document.getElementById('myModal');
+                const openModalButton = document.getElementById('openModal');
+                const closeModal = document.getElementById('closeModal');
+                const closeModalButton = document.getElementById('closeModalButton');
+        
+                openModalButton.onclick = function() {
+                    modal.style.display = 'block';
+                }
+        
+                closeModal.onclick = function() {
+                    modal.style.display = 'none';
+                }
+        
+                closeModalButton.onclick = function() {
+                    modal.style.display = 'none';
+                }
+        
+                window.onclick = function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+            </script></div>
+
     <section id="section1">
         <h2>¿Qué es JavaScript?</h2>
         <p>JavaScript es un lenguaje de programación que se utiliza para crear contenido dinámico e interactivo en las páginas web. Es fundamental para el desarrollo web moderno y se usa junto con HTML y CSS para construir aplicaciones web interactivas.</p>

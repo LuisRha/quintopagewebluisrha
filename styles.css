@@ -273,3 +273,65 @@ img {
     padding: 1em;
   }
 }
+
+/* Estilos para el modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Posiciona el modal sobre todo el contenido */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+  overflow: auto; /* Permite el desplazamiento si el contenido es grande */
+}
+
+/* Estilo para la cabecera del modal */
+.modal-header {
+  padding: 10px;
+  background-color: #eceff1;
+  color: white;
+  text-align: right;
+}
+
+/* Estilos para el cuerpo del modal */
+.modal-body {
+  background-color: #fff; /* Fondo blanco para el contenido del modal */
+  color: #0f13e9e5;
+  margin: 10% auto; /* Centrará el modal verticalmente */
+  padding: 20px;
+  max-width: 50%;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Estilo para el pie del modal */
+.modal-footer {
+  padding: 5px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  border-top: 1px solid #007bff;
+  margin-top: 6%;
+}
+
+/* Estilo para el botón de cierre */
+#closeModal, #closeModalButton {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 4px 8px; /* Ajusta el padding para reducir el tamaño */
+  border-radius: 5px;
+  width: 80px; /* Opcional: Establecer un ancho fijo */
+}
+
+
+/* Estilo para el enlace que abre el modal */
+#openModal {
+  color: #f4f5f7;
+  cursor: pointer;
+  text-decoration: none;
+}
